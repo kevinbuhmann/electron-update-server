@@ -1,0 +1,56 @@
+{
+  "name": "electron-update-server",
+  "version": "1.0.0",
+  "description": "Serves private repo assets for electron updater.",
+  "main": "dist/server.js",
+  "scripts": {
+    "heroku-postbuild": "yarn run build",
+    "start": "dotenv nodemon dist/server.js",
+    "lint": "tslint \"src/**/*.ts\"",
+    "clean": "rimraf dist",
+    "watch": "yarn run clean && webpack --progress --watch",
+    "build": "yarn run clean && webpack --progress --bail",
+    "ide-build": "yarn run lint && yarn run build && echo successfully built"
+  },
+  "engines": {
+    "node": "6.9.4"
+  },
+  "dependencies": {
+    "@angular/common": "2.4.5",
+    "@angular/core": "2.4.5",
+    "@angular/http": "2.4.5",
+    "@angular/platform-browser": "2.4.5",
+    "@types/express": "4.0.35",
+    "@types/node": "7.0.4",
+    "atob": "2.0.3",
+    "awesome-typescript-loader": "3.0.0-beta.18",
+    "babel-core": "6.22.1",
+    "babel-loader": "6.2.10",
+    "babel-preset-es2015": "6.22.0",
+    "dotenv-cli": "1.1.1",
+    "express": "4.14.0",
+    "express-logging": "1.1.1",
+    "json-loader": "0.5.4",
+    "logops": "1.0.7",
+    "nodemon": "1.11.0",
+    "reflect-metadata": "0.1.9",
+    "rimraf": "2.5.4",
+    "rxjs": "5.0.3",
+    "typescript": "2.1.5",
+    "webpack": "1.14.0"
+  },
+  "devDependencies": {
+    "tslint": "4.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinphelps/electron-update-server.git"
+  },
+  "author": "Kevin Phelps <kphelps@vintagesoftware.com>",
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/kevinphelps/electron-update-server/issues"
+  },
+  "homepage": "https://github.com/kevinphelps/electron-update-server#readme"
+}
