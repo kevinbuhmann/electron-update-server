@@ -28,6 +28,15 @@ Run `yarn run watch` and `yarn start` concurrently.
 
 `/download/:owner/:repo/:filename`: Download file from the latest release in the given repo.
 
+## Electron Updater Configuration
+
+```
+"publish": {
+  "provider": 'generic',
+  "url": 'https://example.com/download/:owner/:repo'
+}
+```
+
 ## Deployment
 
 Set up Heroku:
